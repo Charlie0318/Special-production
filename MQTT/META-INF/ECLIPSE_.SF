@@ -1,0 +1,362 @@
+Signature-Version: 1.0
+SHA-256-Digest-Manifest-Main-Attributes: RHQYZJArVfg2ioVhLa098LxwcGSUQ
+ AFmw3zFFHfYrQg=
+SHA-256-Digest-Manifest: V3BRoKnhvVAdI9KSIzEiIhU70NkmJxT+gLpZVM/6j+k=
+Created-By: 1.8.0_51 (Oracle Corporation)
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_hu.properti
+ es
+SHA-256-Digest: WjeQ0OmPMKH+LGOMwhf1lhLUH1No/E+XswzC+TlTHw4=
+
+Name: org/eclipse/paho/client/mqttv3/internal/LocalNetworkModule.java
+SHA-256-Digest: dnxyhxrm6xicRVisd8nfBKC8WeCfJE5il6mtMM8AxSg=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_fr.properti
+ es
+SHA-256-Digest: rcZNBFk8CLzVIC9ntEGxge7cHTgG+kQgJIYFUPPZgQU=
+
+Name: org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketNetwo
+ rkModule.java
+SHA-256-Digest: Hw6zOuPx6MkdLTDkhC+CwNWruBnvh0+R8lHmkiGm/fw=
+
+Name: org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketHands
+ hake.java
+SHA-256-Digest: 6oeTmGfJnve5C9CmjApFs7KUkwdDn0HlT07Z+PDpe8o=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/logcat.properties
+SHA-256-Digest: QUE7gL3NDJ6yP02StiJaK6sxEQGtxA5MAqbWAZ6p4Cc=
+
+Name: org/eclipse/paho/client/mqttv3/util/Strings.java
+SHA-256-Digest: bwDkfFiEWb8xTveTomucrY/mVOSxF5XZeKwtMdMGw1c=
+
+Name: org/eclipse/paho/client/mqttv3/logging/jsr47min.properties
+SHA-256-Digest: tzhQgtIJ9Mbr6Sfy5Y7LZRygz5HCfu97LaU15NNVMYw=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttPingReq.java
+SHA-256-Digest: 8Lj2HMuhQmf+3gM1crmykdx50JyKvVndq8uc2+Nnhxw=
+
+Name: org/eclipse/paho/client/mqttv3/logging/Logger.java
+SHA-256-Digest: +c2du0eyp10ZY4aFF9QPmmagbVfY7eYUDyZjkBa6dPc=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttAck.java
+SHA-256-Digest: 5k9kocOjIFO9VeEavqF/c/WQqwuEoXjvMxKg9OsRA5Q=
+
+Name: org/eclipse/paho/client/mqttv3/internal/CommsSender.java
+SHA-256-Digest: naG+ve0Lf45l1jw0E81EtKix35cIKbuUKIPoqhtlm7Y=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_ru.properti
+ es
+SHA-256-Digest: NRkbvoIYlkj9qsbAQjPJkgDykfP+40IdJ8Wlf4xQyZQ=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_ko.properti
+ es
+SHA-256-Digest: NsYTfGC1rVLwtbdJzvUa697reHhVB29kwRk9Du/S+0o=
+
+Name: org/eclipse/paho/client/mqttv3/MqttPersistenceException.java
+SHA-256-Digest: Fyo+vUIsKhv98NbVe02nH6s56LxYWlvThRhuGA3R3XY=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_zh_CN.prope
+ rties
+SHA-256-Digest: innDgQ1rWGyH+7oPX6nacS0leKlMNh4Wkq1fMFPaydk=
+
+Name: org/eclipse/paho/client/mqttv3/internal/ClientDefaults.java
+SHA-256-Digest: 6UsNzfgZI+IwCfzgS5N/BJmFpJijZ+Q5v5kmLB3u1qY=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttPubRec.java
+SHA-256-Digest: bWxOY0tfFzZoyafcKPgIjlYgwPhQj2hyHXF6iwq6YHs=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttPubRel.java
+SHA-256-Digest: hSVsjEIguEnitbkKawhbAH48vX9VvRDGPm9lm2AoTq0=
+
+Name: org/eclipse/paho/client/mqttv3/package.html
+SHA-256-Digest: GIruL+6f7uN9uouGNxQVccweH7TlweEKWclcdOrqVlI=
+
+Name: OSGI-INF/l10n/bundle-src.properties
+SHA-256-Digest: 2rhMeQw/ibhNw8wJJAgbKHWj9hxdNK/PnAOUBms7WrQ=
+
+Name: org/eclipse/paho/client/mqttv3/internal/security/SSLSocketFactor
+ yFactory.java
+SHA-256-Digest: tSycbPwFT3asTCRfrxD9ys7nklHXEJRHpUTvLiVcPwM=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttPersistableWire
+ Message.java
+SHA-256-Digest: +9l47GTNtxsQpUMr/12K3nwNLF1PkL6ib0w19hBsBIs=
+
+Name: org/eclipse/paho/client/mqttv3/MqttToken.java
+SHA-256-Digest: JS9v/UDlqr3sY8LJ8DcBjmjxebEU91RjDXb1BEEFL5o=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttSuback.java
+SHA-256-Digest: MMgt3qIAURRoZZR97r3W4aMCLQy8gg5MDodIb+Vqg8E=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MultiByteArrayInput
+ Stream.java
+SHA-256-Digest: +gWIC33vJi2S6sY5P0sh48Z4Stn0lEdBgEDZWvgkzCE=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttWireMessage.jav
+ a
+SHA-256-Digest: 7b87z3ngh5gHrbDsahlFEq0/O3VnY2atD9sGPV8adzM=
+
+Name: org/eclipse/paho/client/mqttv3/internal/MqttPersistentData.java
+SHA-256-Digest: +zjbJZ2OMq9wi/NMVcUG7Shyhbs91pCWFuxbPkTfjw8=
+
+Name: org/eclipse/paho/client/mqttv3/MqttSecurityException.java
+SHA-256-Digest: pj/U/DwUQy6/m3IpZfACJrclrP8vwibSCWRTVnmnOHQ=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttDisconnect.java
+SHA-256-Digest: K5jEBtIeejXJCI5Lt6FEod8zp19dmekcYa7RtH5ciT4=
+
+Name: org/eclipse/paho/client/mqttv3/DisconnectedBufferOptions.java
+SHA-256-Digest: RVbO1VdT1SJceUBarKB5MdSW+/yHRGC5wEhrGJzo3+0=
+
+Name: org/eclipse/paho/client/mqttv3/internal/TCPNetworkModule.java
+SHA-256-Digest: HcZwYnq8n+806Vy0lTQiAIyDgbB+WWXRFB/zfDx9Cco=
+
+Name: org/eclipse/paho/client/mqttv3/internal/SSLNetworkModule.java
+SHA-256-Digest: H75t+GB6qhlUJESgBnMK3oDz+7cLcQuGSO3xd5TAaE8=
+
+Name: org/eclipse/paho/client/mqttv3/MqttAsyncClient.java
+SHA-256-Digest: l+FeGrZAR3vNpTsYFtb0YUY10psu0PVrUA/MBkLeFuE=
+
+Name: org/eclipse/paho/client/mqttv3/internal/websocket/HandshakeFaile
+ dException.java
+SHA-256-Digest: tPPmP2cM/9Czu9UCAO8UjUe3VU9FRg9eV8OLk3xgXoM=
+
+Name: org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketRecei
+ ver.java
+SHA-256-Digest: kmEdBhrXQFV2yhe/v37NHCZcvneZUPx0mMt0FO/tsoA=
+
+Name: org/eclipse/paho/client/mqttv3/persist/package.html
+SHA-256-Digest: bTMLvD0tjpAU6SlRyQuIC/yB5JhHfClL3CVNCs1uL3c=
+
+Name: org/eclipse/paho/client/mqttv3/TimerPingSender.java
+SHA-256-Digest: X55c5SZNAFVepXNqbZAtRSOyUPg4Fhnn5Ne1Wc0E7jw=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_pl.properti
+ es
+SHA-256-Digest: xCyrFsDuNjh6zCBu2kpwBFYbSalwY1c7LRwW3ovwbww=
+
+Name: org/eclipse/paho/client/mqttv3/MqttException.java
+SHA-256-Digest: FdpxHUHlBaUoCJi/U7YsxRe7qw24hpag1+2UcZPZULk=
+
+Name: org/eclipse/paho/client/mqttv3/internal/FileLock.java
+SHA-256-Digest: mqELzEM9LEUtAl4zBLZb1lq7NjV0KuzR4Y2xac8BWdM=
+
+Name: org/eclipse/paho/client/mqttv3/MqttClientPersistence.java
+SHA-256-Digest: wrgXF0IGQe4vbGrcVRyxLoptjH76wVdavOxkHzEVHWM=
+
+Name: org/eclipse/paho/client/mqttv3/internal/ResourceBundleCatalog.ja
+ va
+SHA-256-Digest: /LqD/ubAtC2ZD7FUOVmC+TnT7Vse1LubP9uGiidU9f8=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MultiByteInteger.ja
+ va
+SHA-256-Digest: Fpnn5X0L+llSq9ECsgS54faxIOI2Kt4s0tpdRKTQ5T8=
+
+Name: org/eclipse/paho/client/mqttv3/internal/ClientComms.java
+SHA-256-Digest: 7kJ5bpaKlmDPL8xSqFc/W+Wi5V41eyz6nsvMweLzFcU=
+
+Name: org/eclipse/paho/client/mqttv3/util/package.html
+SHA-256-Digest: 2H5QKicTcniruMJjWrJgifvDMORD/yGjyO5Vg9ewCJI=
+
+Name: org/eclipse/paho/client/mqttv3/MqttPingSender.java
+SHA-256-Digest: 7ZO/Tg16Z7ElfgjJpLS6VRw46ftSJqeGGHkD6vsKdgE=
+
+Name: org/eclipse/paho/client/mqttv3/persist/MemoryPersistence.java
+SHA-256-Digest: UwCpV7IJoTqcf8UPEGPB/eSSODeCTAODnO5UmrootlQ=
+
+Name: org/eclipse/paho/client/mqttv3/internal/CommsReceiver.java
+SHA-256-Digest: qEYTp03mnzTYclc4Sp40W57EoErUVBRHECytMPCBOas=
+
+Name: org/eclipse/paho/client/mqttv3/MqttConnectOptions.java
+SHA-256-Digest: leeVHkHvgqM7ZPSnQAcyo0xgQv/CJxgv57maJ3zePhU=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttPingResp.java
+SHA-256-Digest: wQRkoCwHUpR3K7AjIF9GPsJMeWx72qqNdhCMY0PqYIg=
+
+Name: org/eclipse/paho/client/mqttv3/MqttCallbackExtended.java
+SHA-256-Digest: gFrdEOGiuBIzatNCacCH+TmClyj8I/qcXV8suXgWw6A=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages.properties
+SHA-256-Digest: A+jQhx1O4WTYwXuP5n0H5BM/KE9jgHIA5KcgREI9ndc=
+
+Name: org/eclipse/paho/client/mqttv3/internal/websocket/Base64.java
+SHA-256-Digest: 6FrQLYYmeaN8iEyMw1XuUWbB0Whv1thVvWohF5saIYE=
+
+Name: org/eclipse/paho/client/mqttv3/IMqttToken.java
+SHA-256-Digest: WoVCMEBcOFwqy79D2CfxDvgUVbX8Df6u8hKXO6fuJi4=
+
+Name: org/eclipse/paho/client/mqttv3/MqttDeliveryToken.java
+SHA-256-Digest: HeOE31OP1JZV6fBD/Kej/d4yGwfkrnY80/Y4k67xsnU=
+
+Name: org/eclipse/paho/client/mqttv3/logging/SimpleLogFormatter.java
+SHA-256-Digest: 09Y4k44onAWaQAIRHJHAIO8oNBa8h2gcpgjwFTnH+jE=
+
+Name: org/eclipse/paho/client/mqttv3/IMqttDeliveryToken.java
+SHA-256-Digest: r7zxlkCnkVraIVzTyKj638TxD2XHCN699/Uvqm81L40=
+
+Name: org/eclipse/paho/client/mqttv3/internal/DisconnectedMessageBuffe
+ r.java
+SHA-256-Digest: sN/GRkiKNiFNRbsJcG1FoVlJ8x1wBi29RGL7+Frbl0Y=
+
+Name: org/eclipse/paho/client/mqttv3/internal/ExceptionHelper.java
+SHA-256-Digest: 2rChE3tCoXmW3oH/kieHVSGP3s7F+mI4Ul5dvdntDXY=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttPublish.java
+SHA-256-Digest: gHcuX4aBDdvOEnJVc8tPx61oJBFQ8mducui6Nfsq4mU=
+
+Name: org/eclipse/paho/client/mqttv3/internal/IDisconnectedBufferCallb
+ ack.java
+SHA-256-Digest: b3DvRYPBrX7bOl7qWmdDMjYYmoeEens3q9zHral35NM=
+
+Name: org/eclipse/paho/client/mqttv3/logging/LoggerFactory.java
+SHA-256-Digest: L8v8mcZ4XDgbSK9g2KgxUafYrD9chj5xehhA90tTdig=
+
+Name: org/eclipse/paho/client/mqttv3/MqttCallback.java
+SHA-256-Digest: iiDybAEJByLprEjKGZW6pqj75Qv0nkno5PesLnmA3B8=
+
+Name: org/eclipse/paho/client/mqttv3/internal/Token.java
+SHA-256-Digest: tt2I+hh3ZtqG96YYDoaMHw20Kht1F+RwLiwQBjJ4N6c=
+
+Name: org/eclipse/paho/client/mqttv3/MqttClient.java
+SHA-256-Digest: osO8ELzLb6yQmDDvCLkBGwpugpf/0fvGW+3HX+bqdBc=
+
+Name: org/eclipse/paho/client/mqttv3/internal/ConnectActionListener.ja
+ va
+SHA-256-Digest: +3lJEU/rMJ4K5Z3oWiWwEhP8b0/jxsztNZkM43vEcEA=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttPubAck.java
+SHA-256-Digest: t9jSle3N4V7v4SaMTXbcPr+To9X6mRp0+719pLYgcXU=
+
+Name: org/eclipse/paho/client/mqttv3/internal/NetworkModule.java
+SHA-256-Digest: 8gfKca0/DunDSBnC4dlqMtW2oh2qf8tmMYWXsvVHT8o=
+
+Name: org/eclipse/paho/client/mqttv3/internal/CommsCallback.java
+SHA-256-Digest: M/NT0z/bcwK6z6gJVwGFjvzEPFWh5+BF41Lz5NOI93I=
+
+Name: org/eclipse/paho/client/mqttv3/internal/DestinationProvider.java
+SHA-256-Digest: La5EZTP8kup6mpijdMk0Ybb5QlGSQzmhkwFq5SQv/CY=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_es.properti
+ es
+SHA-256-Digest: oErsWLzYFU3TKcATbrxXK3geW75h1Xc6S70cjqtkNMQ=
+
+Name: org/eclipse/paho/client/mqttv3/IMqttActionListener.java
+SHA-256-Digest: f1hNX0dZtU25c/uv90L/85K98IC0Ewx6vVD4ccTkxQE=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_pt_BR.prope
+ rties
+SHA-256-Digest: 1BiDslgqxJpdTXb9gX9vT5MOVyfRsJbnSIwQbB3k/co=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_ja.properti
+ es
+SHA-256-Digest: MXF//28zPRhiOSZhWu86yRF2OIr7wlLRqzO+DQp7YjI=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_cs.properti
+ es
+SHA-256-Digest: ta6CkRCgRgZvdQHH4Y8ogl8WdBF9C+KKF8oRrjGPnFw=
+
+Name: org/eclipse/paho/client/mqttv3/MqttPersistable.java
+SHA-256-Digest: em8DU2af5G1Yn9Vm9HWdEjJfqVMB1VeWj7jSaC6G4J4=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttInputStream.jav
+ a
+SHA-256-Digest: jdf9g7wp/fEGPss4KKSIYPU6Bcdmb6qB6y76WGsEqbE=
+
+Name: bundle.properties
+SHA-256-Digest: 35GRk1M0xy1t3Y62ptQXkhw5pztkSPaobLN+mvmQm9E=
+
+Name: org/eclipse/paho/client/mqttv3/logging/JSR47Logger.java
+SHA-256-Digest: wgcHD8yAYXIJ/VO+ilxK4LpytFXjzSsPvm9NzNic0po=
+
+Name: org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketFrame
+ .java
+SHA-256-Digest: vSwzf0MzUaG2fSPl9dM4V35VuHBCg8HY5UlmvkhXvYI=
+
+Name: org/eclipse/paho/client/mqttv3/internal/ClientState.java
+SHA-256-Digest: w7K1Y7QB/aNZQlCSZiziPAp+sqhBS7KbC98evQLMHp4=
+
+Name: org/eclipse/paho/client/mqttv3/MqttMessage.java
+SHA-256-Digest: eq69PgafxaxoAnE5L5b8YrPIFATfqctedJgFxJasQs4=
+
+Name: org/eclipse/paho/client/mqttv3/util/Debug.java
+SHA-256-Digest: CbMJWwTzwmAGAF+ahB2f30lbIhCX/PizXcU0PZk1miM=
+
+Name: org/eclipse/paho/client/mqttv3/MqttTopic.java
+SHA-256-Digest: ZafNqAJ8nfDNXFp7LZx7oZUSLaD3SDBJ/0cNRCpB2o0=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttUnsubAck.java
+SHA-256-Digest: e/o/p9ZVBOzEz6jBHAzP4VOnoRLOkEfdJR48KRA4Gac=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttSubscribe.java
+SHA-256-Digest: qfSU0DRD1dAu2UaXnQeBSE+48Uk9kS7heWDoTslPVuc=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttOutputStream.ja
+ va
+SHA-256-Digest: 0rOtXHYjb4YTzktfnokZp0WOvmsBY/sYArUeTG9ziQA=
+
+Name: org/eclipse/paho/client/mqttv3/internal/websocket/WebSocketSecur
+ eNetworkModule.java
+SHA-256-Digest: vrX2aZjFLm8792FBe9NNC/5P+XadnN/1ML+8QmYDkiQ=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttReceivedMessage
+ .java
+SHA-256-Digest: NkULsvBncQVxT0UdbRxCmJ+/4+FRr231dPiWDkNfhcU=
+
+Name: org/eclipse/paho/client/mqttv3/IMqttAsyncClient.java
+SHA-256-Digest: eqcTm6Pl+bhYFrsxzoEW+Lp4TSLQWPC3B3VFjDeh93s=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_de.properti
+ es
+SHA-256-Digest: Zo9D6XLmkcmUGJlHHIc4dWzG4NI4kWBYnf7r7Ni7sgU=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttConnack.java
+SHA-256-Digest: 9E8r6c+LVuTvHeDIYr5ZlA0WjPKG+yVpsytZ60TAbkY=
+
+Name: org/eclipse/paho/client/mqttv3/IMqttClient.java
+SHA-256-Digest: lUHyFRiaBK7qD2D6RgrNbBHVvKJfwiUEmulKMbcoKwM=
+
+Name: org/eclipse/paho/client/mqttv3/logging/package.html
+SHA-256-Digest: +wQTlS520gsBmdQY6X7zJShs9NK0rRKrG5/lZ+WIOnc=
+
+Name: org/eclipse/paho/client/mqttv3/BufferedMessage.java
+SHA-256-Digest: NlmZzqPOxT1S7XTDGKIpKrty/Uteg4sfJpJkhGSfBes=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/CountingInputStream
+ .java
+SHA-256-Digest: fnvVRuvtriy2LPtqW1/RWhWV0R9wnnU8WI5yPcNcN9M=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttPubComp.java
+SHA-256-Digest: 9T+hrJ8iyEDIWhWWiOYcHSUGZxM9A4Fslo/S//GAphA=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttConnect.java
+SHA-256-Digest: eoyDbUGnEykpjF60esbheA9/iJsOq7b0bYSB/7LrK1o=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_it.properti
+ es
+SHA-256-Digest: yNmhWOhWR9re7Mk71yCCqfLJZ3ZkAV6XgKKYoiHOQGI=
+
+Name: org/eclipse/paho/client/mqttv3/persist/MqttDefaultFilePersistenc
+ e.java
+SHA-256-Digest: 4mo95sCGvkLnZlrKUUS/uWigjaC85Vtv82CgcowBijw=
+
+Name: org/eclipse/paho/client/mqttv3/internal/wire/MqttUnsubscribe.jav
+ a
+SHA-256-Digest: SJRVxCTo9bDK3Ka2+6qqdtxfT6QoatapXXzoae8e9ug=
+
+Name: org/eclipse/paho/client/mqttv3/internal/nls/messages_zh_TW.prope
+ rties
+SHA-256-Digest: jVChh1RNmgiP8vxoRwiISnPgLBv2ed8rk8dIoxdUbuk=
+
+Name: org/eclipse/paho/client/mqttv3/IMqttMessageListener.java
+SHA-256-Digest: ICSNhOcgz48lbs3SVvYMBNOuvaM9gEDtCcI4Z5wrafw=
+
+Name: org/eclipse/paho/client/mqttv3/internal/CommsTokenStore.java
+SHA-256-Digest: tCtPgIru4dfYKwvv0W+/yCFEL5NQ7KEbgq1WxgqxeSs=
+
+Name: org/eclipse/paho/client/mqttv3/internal/MessageCatalog.java
+SHA-256-Digest: jiD3AZQX67125t5XalmmMoXmgcydDPaOC1DdU4o3bHk=
+
+Name: org/eclipse/paho/client/mqttv3/internal/security/SimpleBase64Enc
+ oder.java
+SHA-256-Digest: lKLb77Uy3WMVAepqLNw3ikxHfcasZ5Ew9al9OsXRDmw=
+
