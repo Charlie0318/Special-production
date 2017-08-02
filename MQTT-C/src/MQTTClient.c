@@ -190,6 +190,10 @@ typedef struct
 #endif
 #if defined(BEE)
 	int bee;
+	MQTTClinet_beeoptions* beehandle;
+//to do MQTTClient_beeoptions* bee;
+/*MQTTClient_publish(MQTTClients handel)
+this bee point to the MQTTClient_beeoptions to know the security*/
 #endif
 	Clients* c;
 	MQTTClient_connectionLost* cl;
@@ -1605,6 +1609,7 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
  			}
  			bee_s[i]='\0';
  			payload=bee_s;
+	//bee_enc(char* Payload,Bee_BeeOptions* BEE,unsigned char* ct);
   	}
 		else
  	 		printf("error");
