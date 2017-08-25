@@ -132,17 +132,16 @@ FLAGS_EXE = $(LDFLAGS) -I ${srcdir} -lpthread -L ${blddir}
 FLAGS_EXES = $(LDFLAGS) -I ${srcdir} ${START_GROUP} -lpthread -lssl -lcrypto ${END_GROUP} -L ${blddir}
 
 LDCONFIG ?= /sbin/ldconfig
-LDFLAGS_C = $(LDFLAGS) -shared -Wl $(LDFLAGS_Bee),-init,$(MQTTCLIENT_INIT) -lpthread
-LDFLAGS_CS = $(LDFLAGS) -shared $(START_GROUP) -lpthread $(EXTRA_LIB) -lssl -lcrypto $(LDFLAGS_Bee) $(END_GROUP) -Wl,-init,$(MQTTCLIENT_INIT)
-LDFLAGS_A = $(LDFLAGS) -shared -Wl $(LDFLAGS_Bee),-init,$(MQTTASYNC_INIT) -lpthread
-LDFLAGS_AS = $(LDFLAGS) -shared $(START_GROUP) -lpthread $(EXTRA_LIB) -lssl -lcrypto $(LDFLAGS_Bee) $(END_GROUP) -Wl,-init,$(MQTTASYNC_INIT)
-LDFLAGS_Bee =-lbee-cpabe-0.1 \
-	-lglib-2.0   \
-	-lgmp \
-	-lbswabe \
-	-lpbc \
-	-lcrypto \
-	-lgmp
+LDFLAGS_C = $(LDFLAGS) -shared -Wl,-init,$(MQTTCLIENT_INIT) -lpthread $(LDFLAGS_Bee)
+LDFLAGS_CS = $(LDFLAGS) -shared $(START_GROUP) -lpthread $(EXTRA_LIB) -lssl -lcrypto $(END_GROUP) -Wl,-init,$(MQTTCLIENT_INIT) 
+LDFLAGS_A = $(LDFLAGS) -shared -Wl,-init,$(MQTTASYNC_INIT) -lpthread $(LDFLAGS_Bee)
+LDFLAGS_AS = $(LDFLAGS) -shared $(START_GROUP) -lpthread $(EXTRA_LIB) -lssl -lcrypto $(END_GROUP) -Wl,-init,$(MQTTASYNC_INIT) $(LDFLAGS_Bee)
+LDFLAGS_Bee = -L -lbee-cpabe-0.1 \
+	 -lglib-2.0   \
+	 -lgmp \
+	 -lbswabe \
+	 -lpbc \
+	 -lgmp
 SED_COMMAND = sed \
     -e "s/@CLIENT_VERSION@/${release.version}/g" \
     -e "s/@BUILD_TIMESTAMP@/${build.level}/g"

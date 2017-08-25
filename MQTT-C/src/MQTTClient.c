@@ -65,7 +65,7 @@
 #define URI_SSL "ssl://"
 #endif
 #if defined(BEE)
-#include <ctype.h>
+//#include "Test.h"
 #endif
 #define URI_TCP "tcp://"
 
@@ -190,8 +190,8 @@ typedef struct
 #endif
 #if defined(BEE)
 	int bee;
-	MQTTClinet_beeoptions* beehandle;
-//to do MQTTClient_beeoptions* bee;
+	MQTTClient_BeeOptions* beehandle;
+//to do MQTTClient_Beeoptions* bee;
 /*MQTTClient_publish(MQTTClients handel)
 this bee point to the MQTTClient_beeoptions to know the security*/
 #endif
@@ -1597,7 +1597,7 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
 #if defined(BEE)
   	if(m->bee == 1)
   	{
- 			char* bee_buffer = NULL;
+ 			/*char* bee_buffer = NULL;
  			char bee_s[20];
  			int i =0;
  			bee_buffer=payload;
@@ -1608,8 +1608,9 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
  				i++;
  			}
  			bee_s[i]='\0';
- 			payload=bee_s;
+ 			payload=bee_s;*/
 	//bee_enc(char* Payload,Bee_BeeOptions* BEE,unsigned char* ct);
+	bee_enc();
   	}
 		else
  	 		printf("error");
