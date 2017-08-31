@@ -150,7 +150,9 @@ int main(int argc, char** argv)
 	conn_opts.username = opts.username;
 	conn_opts.password = opts.password;
 	ssl_opts.enableServerCertAuth = 0;
-	bee_opts.uppercase = 1;
+	bee_opts.dosomething = 1;
+	bee_opts.pub_key="/home/wei/Desktop/cpabe_publickey";
+	bee_opts.policy="a and b";
 	conn_opts.ssl = &ssl_opts;
   	conn_opts.bee = &bee_opts;
 	

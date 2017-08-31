@@ -143,7 +143,7 @@ int main(int argc, char** argv)
 	conn_opts.cleansession = 1;
 	conn_opts.username = opts.username;
 	conn_opts.password = opts.password;
-	bee_opts.uppercase = 1;
+	bee_opts.dosomething = 1;
 	conn_opts.bee = &bee_opts;
 
 	myconnect(&client, &conn_opts);
