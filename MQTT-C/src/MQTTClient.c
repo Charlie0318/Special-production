@@ -1210,7 +1210,7 @@ int MQTTClient_connect(MQTTClient handle, MQTTClient_connectOptions* options)
 	if (options->struct_version < 2 || options->serverURIcount == 0)
 		rc = MQTTClient_connectURI(handle, options, m->serverURI);
  	#if defined(BEE)
-			if (options->bee->uppercase == 1)
+			if (options->bee->dosomething == 1)
 			{
 				m->bee = 1;
 			}
@@ -1597,10 +1597,13 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
 #if defined(BEE)
   	if(m->bee == 1)
   	{
- 			/*char* bee_buffer = NULL;
- 			char bee_s[20];
+printf("1\n");
+ 			unsigned char* bee_buffer = NULL;
+			bee_buffer=payload;
+			unsigned char* ct_buffer = NULL;
+ 			/*char bee_s[20];
  			int i =0;
- 			bee_buffer=payload;
+ 			
  			while(*bee_buffer !='\0')
  			{
  				bee_s[i]=toupper(*bee_buffer);
@@ -1609,8 +1612,11 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
  			}
  			bee_s[i]='\0';
  			payload=bee_s;*/
-	//bee_enc(char* Payload,Bee_BeeOptions* BEE,unsigned char* ct);
-	bee_enc();
+	//TO DO some check like pub_key path exist?...
+printf("2\n");
+	bee_enc(m->beehandle->pub_key,bee_buffer,m->beehandle->policy,&ct_buffer);
+	payload=*ct_buffer;
+	
   	}
 		else
  	 		printf("error");
