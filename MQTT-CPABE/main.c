@@ -94,7 +94,6 @@ int main(void)
 	
 	printf("$$$%d$$$\n",totalheader[3]);
 	printf("$$$%d$$$\n",totalheader[4]);
-	printf("$$$%d$$$\n",totalheader[5]);
 	
 	printf("Success!\n");
 	return 1;
