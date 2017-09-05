@@ -35,7 +35,7 @@ public class MQTT_Publisher {
         Scanner sc = new Scanner(System.in);
         String userName ="test";
         String password ="000";
-        int security = 1;
+        int security = 0;
         
         
         

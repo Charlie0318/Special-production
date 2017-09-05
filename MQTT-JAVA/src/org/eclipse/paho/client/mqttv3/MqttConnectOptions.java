@@ -610,16 +610,16 @@ public class MqttConnectOptions {
 		MqttClient sample = new MqttClient(content, security);
 		
 		// TODO Auto-generated method stub
-		if(security == 1){
-				sample.publish(security,content);
+		if(bee == true){
+				content = sample.publish(security,content);
+			return content;
 			
-			
-		return content;
+		
 		
 		}
-		//else if(bee == false){
-			//return content;
-		//}
+		else if(bee == false){
+			return content;
+		}
 		
 			
 		//return content;
