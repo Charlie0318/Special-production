@@ -35,7 +35,9 @@ public class MQTT_Publisher {
         Scanner sc = new Scanner(System.in);
         String userName ="test";
         String password ="000";
-        int security = 0;
+        int security = 1;
+        
+        boolean bee = true;
         
         
         
@@ -72,27 +74,24 @@ public class MQTT_Publisher {
             //String en=AES.getencrypt(content);
             //String encryptd=new String (en);
          
-            //System.out.println("\nget密文:"+encryptd);
+            //System.out.println(":"+encryptd);
          
             //解密
+            
             //String de=AES.getdecrypt(content,encryptd);
             //String decryptd=new String (de);
-           // System.out.println("\nget明文:"+decryptd);
+           // System.out.println(":"+decryptd);
             
             
             
             System.out.println("Publishing message: "+content);
             
-            content = options.Beetalk(true,content,security);
-            
             options.setCleanSession(true);
-            
-            
             
             MqttMessage message = new MqttMessage(content.getBytes());
             
             message.setQos(qos);
-            sample.publish(topic,message);
+            sample.publish(topic,message,security,bee);
             System.out.println("Message published");
             sample.disconnect();
             System.out.println("Disconnected");
