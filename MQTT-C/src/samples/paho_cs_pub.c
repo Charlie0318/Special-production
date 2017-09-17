@@ -153,6 +153,7 @@ int main(int argc, char** argv)
 	bee_opts.dosomething = 1;
 	bee_opts.pub_key="/home/wei/Desktop/cpabe_publickey";
 	bee_opts.policy="a and b";
+	bee_opts.priv_key="/home/wei/Desktop/jackiemqtt_key";
 	conn_opts.ssl = &ssl_opts;
   	conn_opts.bee = &bee_opts;
 	

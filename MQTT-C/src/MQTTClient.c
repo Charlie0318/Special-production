@@ -494,6 +494,17 @@ static int MQTTClient_deliverMessage(int rc, MQTTClients* m, char** topicName, i
 
 	FUNC_ENTRY;
 	*message = qe->msg;
+#if defined(BEE)
+	if(m->bee=1){
+	unsigned char* sub_pt_buffer = NULL;
+	printf("payload = %u\n",(char*)(*message)->payload);
+	unsigned char* sub_ct_buffer = NULL;
+	sub_ct_buffer = (char*)(*message)->payload;
+	bee_dec(m->beehandle->pub_key,m->beehandle->priv_key,sub_ct_buffer,&sub_pt_buffer);
+	(*message)->payload=sub_pt_buffer;
+	printf("pt_buffer = %s",sub_pt_buffer);	
+	}
+#endif	
 	*topicName = qe->topicName;
 	*topicLen = qe->topicLen;
 	if (strlen(*topicName) != *topicLen)
@@ -1212,6 +1223,7 @@ int MQTTClient_connect(MQTTClient handle, MQTTClient_connectOptions* options)
  	#if defined(BEE)
 			if (options->bee->dosomething == 1)
 			{
+				m->beehandle=options->bee;				
 				m->bee = 1;
 			}
 #endif
@@ -1597,10 +1609,10 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
 #if defined(BEE)
   	if(m->bee == 1)
   	{
-printf("1\n");
  			unsigned char* bee_buffer = NULL;
 			bee_buffer=payload;
 			unsigned char* ct_buffer = NULL;
+			unsigned char* pt_buffer = NULL;
  			/*char bee_s[20];
  			int i =0;
  			
@@ -1613,9 +1625,12 @@ printf("1\n");
  			bee_s[i]='\0';
  			payload=bee_s;*/
 	//TO DO some check like pub_key path exist?...
-printf("2\n");
 	bee_enc(m->beehandle->pub_key,bee_buffer,m->beehandle->policy,&ct_buffer);
-	payload=*ct_buffer;
+	payload=ct_buffer;
+	printf("ct_buffer = %u\n",ct_buffer);
+	bee_dec(m->beehandle->pub_key,m->beehandle->priv_key,payload,&pt_buffer);
+	printf("Outside Dec pt_buffer = %s\n",pt_buffer);
+	printf("End!\n");
 	
   	}
 		else

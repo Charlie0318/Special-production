@@ -144,6 +144,8 @@ int main(int argc, char** argv)
 	conn_opts.username = opts.username;
 	conn_opts.password = opts.password;
 	bee_opts.dosomething = 1;
+	bee_opts.pub_key="/home/wei/Desktop/cpabe_publickey";
+	bee_opts.priv_key="/home/wei/Desktop/jackiemqtt_key";
 	conn_opts.bee = &bee_opts;
 
 	myconnect(&client, &conn_opts);
