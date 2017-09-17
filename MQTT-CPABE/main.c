@@ -1,6 +1,7 @@
 #include<stdio.h>
 #include"Test.h"
 #include<string.h>
+#include<stdlib.h>
 
 struct
 {
@@ -20,15 +21,19 @@ int main(void)
 	char* Payload = "check_";
 	char j[6] = "";
         char header[6] ="";
-        int number;
+        int i = 0;
+	int number;
         int count;
         int counter=1;
         int output=0;
 	int length = 0;
+	unsigned char buff[4]={0,0,0,0};
+	unsigned char* cipher ="EMPTY";
+	
 	Bee_BeeOptions test = Bee_BeeOptions_initializer;
-	length=fun(Payload,&test);
-	printf("%d\n",length);
-	test.security = 6;
+	length=fun(Payload,&test,&cipher);
+	printf("%d Bytes\n",length);
+	test.security=6;
 /*        number = test.security;
 	Bee_BeeOptions test = Bee_BeeOptions_initializer;
 	fun(Payload,&test);
@@ -65,9 +70,31 @@ int main(void)
         strcat(header,j);
         printf("header = %s\n",header);
 */
-	length=fun(Payload,&test);
-	printf("%d\n",length);
-	fun(Payload,&test);
+	//length = length; //byte->bit
+	int rc_M = 0;
+	rc_M=encode(buff,length);
+
+	for(i=0;i<rc_M;i++)
+	{
+		printf("%d\n",buff[i]);
+	}
+	printf("%s\n",cipher);
+	//fun(Payload,&test);
+	unsigned char* totalheader=malloc(1+length+rc_M);
+	totalheader[0]=(unsigned char)test.security;
+	printf("$$$%d$$$\n",totalheader[0]);
+	for(i=0;i<rc_M;i++)
+	{
+		totalheader[i+1]=buff[i];
+	}
+	printf("$$$%d$$$\n",totalheader[1]);
+	printf("$$$%d$$$\n",totalheader[2]);
+	
+	memcpy(totalheader+1+rc_M,&cipher,length);
+	
+	printf("$$$%d$$$\n",totalheader[3]);
+	printf("$$$%d$$$\n",totalheader[4]);
+	
 	printf("Success!\n");
-	return 0;
+	return 1;
 }

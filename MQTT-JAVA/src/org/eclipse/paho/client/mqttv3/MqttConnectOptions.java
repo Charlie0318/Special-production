@@ -605,26 +605,7 @@ public class MqttConnectOptions {
 		return Debug.dumpProperties(getDebug(), "Connection options");
 	}
 
-	public String Beetalk(boolean bee,String content,int security) throws MqttException {
-		
-		MqttClient sample = new MqttClient(content, security);
-		
-		// TODO Auto-generated method stub
-		if(security == 1){
-				sample.publish(security,content);
-			
-			
-		return content;
-		
-		}
-		//else if(bee == false){
-			//return content;
-		//}
-		
-			
-		//return content;
-		return content;
-	}
+	
 
 	
 }

@@ -30,7 +30,7 @@ public class MqttMessage {
 	private boolean retained = false;
 	private boolean dup = false;
 	private int messageId;
-
+	
 	/**
 	 * Utility method to validate the supplied QoS value.
 	 * @throws IllegalArgumentException if value of QoS is not 0, 1 or 2.
@@ -90,10 +90,12 @@ public class MqttMessage {
 	 */
 	public void setPayload(byte[] payload) {
 		checkMutable();
+		
 		if (payload == null) {
 			throw new NullPointerException();
 		}
 		this.payload = payload;
+		
 	}
 
 	/**
@@ -237,6 +239,15 @@ public class MqttMessage {
 	public int getId() {
 		return this.messageId;
 	}
+
+	public byte[] getBytes() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+
+	
 	
 	
 	

@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 #define SIZE 10
-int fun(char* Payload,Bee_BeeOptions* BEE)
+int fun(char* Payload,Bee_BeeOptions* BEE,char** cipher)
 {
 	unsigned char plaintext[256];
 	unsigned char* ciphertext = "PLAIN";
@@ -20,14 +20,14 @@ int fun(char* Payload,Bee_BeeOptions* BEE)
 			return -1;
         	}
 		length=enc("./cpabe_publickey",plaintext,"jackie and s >= 100",&ciphertext);
-       		printf("%d\n",length);
 		printf("ENC SUCCESS: (%s->%s)\n",plaintext,ciphertext);
-		if(dec("./cpabe_publickey","./cpabe_secretkey",ciphertext,&result)==-1)
-		{
-                	printf("DEC FAIL\n");
-                	return -1;
-        	}
-        	printf("DEC SUCCESS: (%s->%s)\n", ciphertext,result);
+//		if(dec("./cpabe_publickey","./cpabe_secretkey",ciphertext,&result)==-1)
+//		{
+  //              	printf("DEC FAIL\n");
+    //            	return -1;
+      //  	}
+        //	printf("DEC SUCCESS: (%s->%s)\n", ciphertext,result);
+		*cipher = ciphertext;
 		return length;
 
 //        	return;
@@ -35,7 +35,7 @@ int fun(char* Payload,Bee_BeeOptions* BEE)
 	}else
 	{
 		//if(fdec("./cpabe_publickey","./cpabe_secretkey","./cat.jpg.cpabe")==-1)
-  //      	return 0;
+        	return -1;
 	}
 }
 /*

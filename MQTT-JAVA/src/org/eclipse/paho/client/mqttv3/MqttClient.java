@@ -418,7 +418,38 @@ public class MqttClient implements IMqttClient { //), DestinationProvider {
 		aClient.publish(topic, message, null, null).waitForCompletion(getTimeToWait());
 		
 	}
+	
+	public void publish(String topic, byte[] payload,int qos, boolean retained,int security) throws MqttException,
+			MqttPersistenceException {
+			
+			MqttMessage message = new MqttMessage(payload);
+			message.setQos(qos);
+			message.setRetained(retained);
 
+			this.publish(topic, message);
+
+	}
+
+
+/*
+* @see IMqttClient#publishBlock(String, MqttMessage)
+*/
+	public void publish(String topic, MqttMessage message,int security,boolean bee) throws MqttException,
+			MqttPersistenceException {
+		if(bee == true){
+		String me = message.toString();//turn String
+		if(security == 1){
+			
+		me = me.toUpperCase();//turn capitalization	
+			
+		message.setPayload(me.getBytes());
+	}
+		
+					aClient.publish(topic, message, security,null).waitForCompletion(getTimeToWait());
+		}
+				}
+	
+	
 	/**
 	 * Set the maximum time to wait for an action to complete.
 	 * <p>Set the maximum time to wait for an action to complete before
@@ -554,13 +585,8 @@ public class MqttClient implements IMqttClient { //), DestinationProvider {
 
 	
 
-	public String publish(int security, String content) {
-		// TODO Auto-generated method stub
-		if(security == 1){
-		content = content.toUpperCase();
-		return content;
-		}
-		return content;
-	}
+	
 	
 }
+
+

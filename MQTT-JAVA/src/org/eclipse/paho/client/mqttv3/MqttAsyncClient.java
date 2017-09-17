@@ -25,8 +25,10 @@ import java.util.Hashtable;
 import java.util.Properties;
 import java.util.Timer;
 import java.util.TimerTask;
+
 import javax.net.SocketFactory;
 import javax.net.ssl.SSLSocketFactory;
+
 import org.eclipse.paho.client.mqttv3.internal.ClientComms;
 import org.eclipse.paho.client.mqttv3.internal.ConnectActionListener;
 import org.eclipse.paho.client.mqttv3.internal.DisconnectedMessageBuffer;
@@ -993,16 +995,17 @@ public class MqttAsyncClient implements IMqttAsyncClient { // DestinationProvide
 	/* (non-Javadoc)
 	 * @see org.eclipse.paho.client.mqttv3.IMqttAsyncClient#publish(java.lang.String, byte[], int, boolean)
 	 */
-	public IMqttDeliveryToken publish(String topic, byte[] payload, int qos,
+	public IMqttDeliveryToken publish(String topic, byte[] payload,int security, int qos,
 			boolean retained) throws MqttException, MqttPersistenceException {
-		return this.publish(topic, payload, qos, retained, null, null);
+		return this.publish(topic, payload,security, qos, retained);
 	}
-
+	
+	
 	/* (non-Javadoc)
 	 * @see org.eclipse.paho.client.mqttv3.IMqttAsyncClient#publish(java.lang.String, org.eclipse.paho.client.mqttv3.MqttMessage)
 	 */
-	public IMqttDeliveryToken publish(String topic, MqttMessage message) throws MqttException, 	MqttPersistenceException {
-		return this.publish(topic, message, null, null);
+	public IMqttDeliveryToken publish(String topic, MqttMessage message,int security) throws MqttException, 	MqttPersistenceException {
+		return this.publish(topic, message, security,null);
 	}
 
 	/* (non-Javadoc)
@@ -1180,6 +1183,20 @@ public class MqttAsyncClient implements IMqttAsyncClient { // DestinationProvide
 	 */
 	public Debug getDebug() {
 		return new Debug(clientId,comms);
+	}
+
+	@Override
+	public IMqttDeliveryToken publish(String topic, byte[] payload, int qos,
+			boolean retained) throws MqttException, MqttPersistenceException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public IMqttDeliveryToken publish(String topic, MqttMessage message)
+			throws MqttException, MqttPersistenceException {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
