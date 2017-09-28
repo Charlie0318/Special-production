@@ -172,12 +172,16 @@ int main(int argc, char** argv)
 			buffer[data_len++] = getchar();
 			if (data_len > delim_len)
 			{
-			//printf("comparing %s %s\n", opts.delimiter, &buffer[data_len - delim_len]);
+			//char* delimiter; ="\n"
+			printf("data_len = %d \n",data_len);
+			printf("comparing opts.delimiter = %d, &buffer[data_len - delim_len] = %d\n", opts.delimiter, &buffer[data_len - delim_len]);
+			//Compares up to  delim_len characters of the string opts.delimiter with the string &buffer[data_len - delim_len].
 			if (strncmp(opts.delimiter, &buffer[data_len - delim_len], delim_len) == 0)
 				break;
 			}
+			
 		} while (data_len < opts.maxdatalen);
-
+		 
 		if (opts.verbose)
 				printf("Publishing data of length %d\n", data_len);
 		rc = MQTTClient_publish(client, topic, data_len, buffer, opts.qos, opts.retained, NULL);

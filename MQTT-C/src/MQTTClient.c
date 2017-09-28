@@ -495,15 +495,20 @@ static int MQTTClient_deliverMessage(int rc, MQTTClients* m, char** topicName, i
 	FUNC_ENTRY;
 	*message = qe->msg;
 #if defined(BEE)
-	if(m->bee=1){
+	if(m->bee!=NULL){
+	if(m->bee==1){
 	unsigned char* sub_pt_buffer = NULL;
-	printf("payload = %u\n",(char*)(*message)->payload);
+	//printf("payload = %u\n",(char*)(*message)->payload);
 	unsigned char* sub_ct_buffer = NULL;
 	sub_ct_buffer = (char*)(*message)->payload;
-	bee_dec(m->beehandle->pub_key,m->beehandle->priv_key,sub_ct_buffer,&sub_pt_buffer);
+	int dec_length = 0;
+	dec_length=bee_dec(m->beehandle->pub_key,m->beehandle->priv_key,sub_ct_buffer,&sub_pt_buffer);
+	//printf("dec_length = %d \n",dec_length);
+	*((char*)(sub_pt_buffer+dec_length))='\0';	
 	(*message)->payload=sub_pt_buffer;
-	printf("pt_buffer = %s",sub_pt_buffer);	
+	//printf("pt_buffer = %s over!",sub_pt_buffer);	
 	}
+}
 #endif	
 	*topicName = qe->topicName;
 	*topicLen = qe->topicLen;
@@ -1221,11 +1226,13 @@ int MQTTClient_connect(MQTTClient handle, MQTTClient_connectOptions* options)
 	if (options->struct_version < 2 || options->serverURIcount == 0)
 		rc = MQTTClient_connectURI(handle, options, m->serverURI);
  	#if defined(BEE)
+		if(options->bee!=NULL){
 			if (options->bee->dosomething == 1)
 			{
 				m->beehandle=options->bee;				
 				m->bee = 1;
 			}
+		}
 #endif
 	else
 	{
@@ -1607,10 +1614,16 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
 
 	p = malloc(sizeof(Publish));
 #if defined(BEE)
+	if(m->bee!=NULL){
   	if(m->bee == 1)
   	{
- 			unsigned char* bee_buffer = NULL;
+ 			char* bee_buffer = NULL;
 			bee_buffer=payload;
+			*((char*)(payload+(payloadlen)))='\0';
+			//Test =Test\n payloadlen '\n'
+			printf("bee_buffer = %s \n",bee_buffer);
+			printf("-------------------\n");
+			printf("payload = %s \n",payload);
 			unsigned char* ct_buffer = NULL;
 			unsigned char* pt_buffer = NULL;
  			/*char bee_s[20];
@@ -1625,16 +1638,19 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
  			bee_s[i]='\0';
  			payload=bee_s;*/
 	//TO DO some check like pub_key path exist?...
-	bee_enc(m->beehandle->pub_key,bee_buffer,m->beehandle->policy,&ct_buffer);
+	int length=0;
+	length=bee_enc(m->beehandle->pub_key,bee_buffer,m->beehandle->policy,&ct_buffer);
 	payload=ct_buffer;
-	printf("ct_buffer = %u\n",ct_buffer);
-	bee_dec(m->beehandle->pub_key,m->beehandle->priv_key,payload,&pt_buffer);
-	printf("Outside Dec pt_buffer = %s\n",pt_buffer);
+	payloadlen=length;
+	
+	printf("payload length = %d\n",length);
+	/*bee_dec(m->beehandle->pub_key,m->beehandle->priv_key,payload,&pt_buffer);
+	printf("Outside Dec pt_buffer = %s \n",pt_buffer);*/
 	printf("End!\n");
 	
   	}
-		else
- 	 		printf("error");
+}
+		
  #endif
 	p->payload = payload;
 	p->payloadlen = payloadlen;

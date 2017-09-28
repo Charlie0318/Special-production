@@ -108,7 +108,7 @@ int dec(unsigned char* pk_path, unsigned char* sk_path, unsigned char* ct, unsig
  *  4. pt: the plaintext
  *
  *  Return:
- *   0: success
+ *   n: the length of plaintext
  *  -1: failed
  */
 
