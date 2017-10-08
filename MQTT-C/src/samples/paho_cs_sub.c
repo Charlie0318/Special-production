@@ -143,9 +143,10 @@ int main(int argc, char** argv)
 	conn_opts.cleansession = 1;
 	conn_opts.username = opts.username;
 	conn_opts.password = opts.password;
+	bee_opts.security = 6;
 	bee_opts.dosomething = 1;
-	bee_opts.pub_key="/home/wei/Desktop/cpabe_publickey";
-	bee_opts.priv_key="/home/wei/Desktop/jackiemqtt_key";
+	bee_opts.pub_key="/home/lewatin1129/Special-production/MQTT-CPABE/cpabe_publickey";
+	bee_opts.priv_key="/home/lewatin1129/Special-production/MQTT-CPABE/cpabe_secretkey";
 	conn_opts.bee = &bee_opts;
 
 	myconnect(&client, &conn_opts);

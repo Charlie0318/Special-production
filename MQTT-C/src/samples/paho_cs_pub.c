@@ -151,9 +151,11 @@ int main(int argc, char** argv)
 	conn_opts.password = opts.password;
 	ssl_opts.enableServerCertAuth = 0;
 	bee_opts.dosomething = 1;
-	bee_opts.pub_key="/home/wei/Desktop/cpabe_publickey";
-	bee_opts.policy="a and b";
-	bee_opts.priv_key="/home/wei/Desktop/jackiemqtt_key";
+	bee_opts.security = 6;
+	bee_opts.pub_key="/home/lewatin1129/Special-production/MQTT-CPABE/cpabe_publickey";
+	bee_opts.policy="jackie";
+	//bee_opts.policy="jackie and a > 10";
+	bee_opts.priv_key="/home/lewatin1129/Special-production/MQTT-CPABE/cpabe_secretkey";
 	conn_opts.ssl = &ssl_opts;
   	conn_opts.bee = &bee_opts;
 	
@@ -173,8 +175,7 @@ int main(int argc, char** argv)
 			if (data_len > delim_len)
 			{
 			//char* delimiter; ="\n"
-			printf("data_len = %d \n",data_len);
-			printf("comparing opts.delimiter = %d, &buffer[data_len - delim_len] = %d\n", opts.delimiter, &buffer[data_len - delim_len]);
+//			printf("comparing opts.delimiter = %d, &buffer[data_len - delim_len] = %d\n", opts.delimiter, &buffer[data_len - delim_len]);
 			//Compares up to  delim_len characters of the string opts.delimiter with the string &buffer[data_len - delim_len].
 			if (strncmp(opts.delimiter, &buffer[data_len - delim_len], delim_len) == 0)
 				break;

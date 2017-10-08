@@ -498,15 +498,12 @@ static int MQTTClient_deliverMessage(int rc, MQTTClients* m, char** topicName, i
 	if(m->bee!=NULL){
 	if(m->bee==1){
 	unsigned char* sub_pt_buffer = NULL;
-	//printf("payload = %u\n",(char*)(*message)->payload);
 	unsigned char* sub_ct_buffer = NULL;
-	sub_ct_buffer = (char*)(*message)->payload;
+	sub_ct_buffer =(char*)((*message)->payload);
 	int dec_length = 0;
-	dec_length=bee_dec(m->beehandle->pub_key,m->beehandle->priv_key,sub_ct_buffer,&sub_pt_buffer);
-	//printf("dec_length = %d \n",dec_length);
+	dec_length=bee_dec(m->beehandle,sub_ct_buffer,&sub_pt_buffer);
 	*((char*)(sub_pt_buffer+dec_length))='\0';	
 	(*message)->payload=sub_pt_buffer;
-	//printf("pt_buffer = %s over!",sub_pt_buffer);	
 	}
 }
 #endif	
@@ -1620,33 +1617,12 @@ int MQTTClient_publish(MQTTClient handle, const char* topicName, int payloadlen,
  			char* bee_buffer = NULL;
 			bee_buffer=payload;
 			*((char*)(payload+(payloadlen)))='\0';
-			//Test =Test\n payloadlen '\n'
-			printf("bee_buffer = %s \n",bee_buffer);
-			printf("-------------------\n");
-			printf("payload = %s \n",payload);
-			unsigned char* ct_buffer = NULL;
-			unsigned char* pt_buffer = NULL;
- 			/*char bee_s[20];
- 			int i =0;
- 			
- 			while(*bee_buffer !='\0')
- 			{
- 				bee_s[i]=toupper(*bee_buffer);
- 				bee_buffer++;
- 				i++;
- 			}
- 			bee_s[i]='\0';
- 			payload=bee_s;*/
-	//TO DO some check like pub_key path exist?...
+			unsigned char* bee_buf = NULL;
 	int length=0;
-	length=bee_enc(m->beehandle->pub_key,bee_buffer,m->beehandle->policy,&ct_buffer);
-	payload=ct_buffer;
-	payloadlen=length;
-	
-	printf("payload length = %d\n",length);
-	/*bee_dec(m->beehandle->pub_key,m->beehandle->priv_key,payload,&pt_buffer);
-	printf("Outside Dec pt_buffer = %s \n",pt_buffer);*/
-	printf("End!\n");
+	int bee_encodelen=0;
+	length=bee_enc(m->beehandle,bee_buffer,&bee_buf);
+	payload = bee_buf;
+	payloadlen = length;
 	
   	}
 }
