@@ -495,15 +495,23 @@ static int MQTTClient_deliverMessage(int rc, MQTTClients* m, char** topicName, i
 	FUNC_ENTRY;
 	*message = qe->msg;
 #if defined(BEE)
+	int bee_decfail = 0;
 	if(m->bee!=NULL){
 	if(m->bee==1){
-	unsigned char* sub_pt_buffer = NULL;
-	unsigned char* sub_ct_buffer = NULL;
-	sub_ct_buffer =(char*)((*message)->payload);
-	int dec_length = 0;
-	dec_length=bee_dec(m->beehandle,sub_ct_buffer,&sub_pt_buffer);
-	*((char*)(sub_pt_buffer+dec_length))='\0';	
-	(*message)->payload=sub_pt_buffer;
+		unsigned char* sub_pt_buffer = NULL;
+		unsigned char* sub_ct_buffer = NULL;
+		sub_ct_buffer =(char*)((*message)->payload);
+		int dec_length = 0;
+		dec_length=bee_dec(m->beehandle,sub_ct_buffer,&sub_pt_buffer);
+		if(dec_length!=-1)
+		{
+			*((char*)(sub_pt_buffer+dec_length))='\0';	
+			(*message)->payload=sub_pt_buffer;
+		}else
+		{
+			bee_decfail=1;
+			(*message)->payload="\n";
+		}
 	}
 }
 #endif	
