@@ -1,0 +1,474 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f2838f7d1c8, pid=16465, tid=0x00007f283a492700
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_151-b12) (build 1.8.0_151-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.151-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# V  [libjvm.so+0x6e51c8]  jni_GetStringUTFChars+0xb8
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f2834009800):  JavaThread "main" [_thread_in_vm, id=16466, stack(0x00007f283a392000,0x00007f283a493000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000000
+
+Registers:
+RAX=0x00007f2839854850, RBX=0x0000000000000000, RCX=0x00007f283a4917c0, RDX=0x00007f2839862ce0
+RSP=0x00007f283a491640, RBP=0x00007f283a4916e0, RSI=0x00007f2834009800, RDI=0x00007f283a491680
+R8 =0x0000000000000000, R9 =0x0000000000000004, R10=0x00007f2824394988, R11=0x00007f28392603a0
+R12=0x00007f2834009800, R13=0x0000000000000000, R14=0x00007f283a4917d0, R15=0x00007f283a491680
+RIP=0x00007f2838f7d1c8, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f283a491640)
+0x00007f283a491640:   00007f2823a14b58 0000000000000000
+0x00007f283a491650:   00007f2823a14b58 00007f283a491690
+0x00007f283a491660:   00007f2834009800 00007f283a4916b0
+0x00007f283a491670:   00007f283a491690 00007f2834009800
+0x00007f283a491680:   00007f2834009800 0000000000000000
+0x00007f283a491690:   00007f2823a14b58 00007f2834009800
+0x00007f283a4916a0:   00007f2834009800 00007f2834009800
+0x00007f283a4916b0:   00007f2823a14b58 00007f28340099f8
+0x00007f283a4916c0:   00007f283a4917c0 0000000000000000
+0x00007f283a4916d0:   00007f283a4917d0 00007f2834009800
+0x00007f283a4916e0:   00007f283a491798 00007f28214f60b1
+0x00007f283a4916f0:   00007f2834009800 00007f2823a14b58
+0x00007f283a491700:   0000000000000000 00007f2823a14b58
+0x00007f283a491710:   00007f283a491798 0000000000000000
+0x00007f283a491720:   00007f2823a14b58 00007f28243949b4
+0x00007f283a491730:   00007f2823a14b58 0000000000000000
+0x00007f283a491740:   00007f283a491798 00007f2824394747
+0x00007f283a491750:   00007f2824394702 00007f283a491758
+0x00007f283a491760:   00007f2823a14b58 00007f283a4917d0
+0x00007f283a491770:   00007f2823a14e20 0000000000000000
+0x00007f283a491780:   00007f2823a14b58 0000000000000000
+0x00007f283a491790:   00007f283a4917b8 00007f283a491818
+0x00007f283a4917a0:   00007f2824385040 0000000000000000
+0x00007f283a4917b0:   00007f282438e51b 0000000000000000
+0x00007f283a4917c0:   00000000c23f6f60 0000000000000000
+0x00007f283a4917d0:   00000000c23fa088 00007f283a4917d8
+0x00007f283a4917e0:   00007f28239d2ec2 00007f283a491870
+0x00007f283a4917f0:   00007f28239d38b0 0000000000000000
+0x00007f283a491800:   00007f28239d2ef8 00007f283a4917b8
+0x00007f283a491810:   00007f283a491850 00007f283a4918b8
+0x00007f283a491820:   00007f28243852bd 00000000c22a3680
+0x00007f283a491830:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007f2838f7d1c8)
+0x00007f2838f7d1a8:   84 24 70 02 00 00 06 00 00 00 4c 89 e6 4c 89 65
+0x00007f2838f7d1b8:   c0 4c 89 ff e8 1f 01 01 00 48 8b 05 88 f1 88 00
+0x00007f2838f7d1c8:   4c 8b 2b 8b 10 48 8b 05 dc 1d 89 00 80 38 00 0f
+0x00007f2838f7d1d8:   84 2b 01 00 00 48 63 c2 41 8b 54 05 00 85 d2 0f 
+
+Register to memory mapping:
+
+RAX=0x00007f2839854850: <offset 0xfbc850> in /home/project_bee/jdk1.8.0_151/jre/lib/amd64/server/libjvm.so at 0x00007f2838898000
+RBX=0x0000000000000000 is an unknown value
+RCX=0x00007f283a4917c0 is pointing into the stack for thread: 0x00007f2834009800
+RDX=0x00007f2839862ce0: <offset 0xfcace0> in /home/project_bee/jdk1.8.0_151/jre/lib/amd64/server/libjvm.so at 0x00007f2838898000
+RSP=0x00007f283a491640 is pointing into the stack for thread: 0x00007f2834009800
+RBP=0x00007f283a4916e0 is pointing into the stack for thread: 0x00007f2834009800
+RSI=0x00007f2834009800 is a thread
+RDI=0x00007f283a491680 is pointing into the stack for thread: 0x00007f2834009800
+R8 =0x0000000000000000 is an unknown value
+R9 =0x0000000000000004 is an unknown value
+R10=0x00007f2824394988 is at code_begin+808 in an Interpreter codelet
+method entry point (kind = native)  [0x00007f2824394660, 0x00007f2824394f60]  2304 bytes
+R11=0x00007f28392603a0: <offset 0x9c83a0> in /home/project_bee/jdk1.8.0_151/jre/lib/amd64/server/libjvm.so at 0x00007f2838898000
+R12=0x00007f2834009800 is a thread
+R13=0x0000000000000000 is an unknown value
+R14=0x00007f283a4917d0 is pointing into the stack for thread: 0x00007f2834009800
+R15=0x00007f283a491680 is pointing into the stack for thread: 0x00007f2834009800
+
+
+Stack: [0x00007f283a392000,0x00007f283a493000],  sp=0x00007f283a491640,  free space=1021k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x6e51c8]  jni_GetStringUTFChars+0xb8
+C  [libbee-cpabe-0.1.so+0x3c0b1]  Java_tw_edu_au_csie_ucan_bee_BeeJNI_enc+0x21
+j  org.eclipse.paho.client.mqttv3.MqttClient.publish(Ljava/lang/String;Lorg/eclipse/paho/client/mqttv3/MqttMessage;IZ)V+42
+j  MQTT_Publisher.main([Ljava/lang/String;)V+228
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x693e76]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x1056
+V  [libjvm.so+0x6d5292]  jni_invoke_static(JNIEnv_*, JavaValue*, _jobject*, JNICallType, _jmethodID*, JNI_ArgumentPusher*, Thread*)+0x362
+V  [libjvm.so+0x6f1afa]  jni_CallStaticVoidMethod+0x17a
+C  [libjli.so+0x80ff]  JavaMain+0x81f
+C  [libpthread.so.0+0x8184]  start_thread+0xc4
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  tw.edu.au.csie.ucan.bee.BeeJNI.enc(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)[B+0
+j  org.eclipse.paho.client.mqttv3.MqttClient.publish(Ljava/lang/String;Lorg/eclipse/paho/client/mqttv3/MqttMessage;IZ)V+42
+j  MQTT_Publisher.main([Ljava/lang/String;)V+228
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f28040c8000 JavaThread "MQTT Ping: Javasample2" [_thread_blocked, id=16479, stack(0x00007f2822392000,0x00007f2822493000)]
+  0x00007f2808041000 JavaThread "MQTT Call: Javasample2" [_thread_blocked, id=16478, stack(0x00007f2821854000,0x00007f2821955000)]
+  0x00007f2808040000 JavaThread "MQTT Snd: Javasample2" [_thread_blocked, id=16477, stack(0x00007f2821955000,0x00007f2821a56000)]
+  0x00007f280803d000 JavaThread "MQTT Rec: Javasample2" [_thread_in_native, id=16476, stack(0x00007f2821a56000,0x00007f2821b57000)]
+  0x00007f28340b5000 JavaThread "Service Thread" daemon [_thread_blocked, id=16473, stack(0x00007f2822594000,0x00007f2822695000)]
+  0x00007f28340b2000 JavaThread "C1 CompilerThread1" daemon [_thread_blocked, id=16472, stack(0x00007f2822695000,0x00007f2822796000)]
+  0x00007f28340b0000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=16471, stack(0x00007f2822796000,0x00007f2822897000)]
+  0x00007f28340ae800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=16470, stack(0x00007f2822897000,0x00007f2822998000)]
+  0x00007f283407a800 JavaThread "Finalizer" daemon [_thread_blocked, id=16469, stack(0x00007f282307b000,0x00007f282317c000)]
+  0x00007f2834076000 JavaThread "Reference Handler" daemon [_thread_blocked, id=16468, stack(0x00007f282317c000,0x00007f282327d000)]
+=>0x00007f2834009800 JavaThread "main" [_thread_in_vm, id=16466, stack(0x00007f283a392000,0x00007f283a493000)]
+
+Other Threads:
+  0x00007f283406e000 VMThread [stack: 0x00007f282327d000,0x00007f282337e000] [id=16467]
+  0x00007f28340b8800 WatcherThread [stack: 0x00007f2822493000,0x00007f2822594000] [id=16474]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ def new generation   total 19008K, used 3394K [0x00000000c2200000, 0x00000000c36a0000, 0x00000000d6c00000)
+  eden space 16896K,  20% used [0x00000000c2200000, 0x00000000c2550ad8, 0x00000000c3280000)
+  from space 2112K,   0% used [0x00000000c3280000, 0x00000000c3280000, 0x00000000c3490000)
+  to   space 2112K,   0% used [0x00000000c3490000, 0x00000000c3490000, 0x00000000c36a0000)
+ tenured generation   total 42368K, used 0K [0x00000000d6c00000, 0x00000000d9560000, 0x0000000100000000)
+   the space 42368K,   0% used [0x00000000d6c00000, 0x00000000d6c00000, 0x00000000d6c00200, 0x00000000d9560000)
+ Metaspace       used 4261K, capacity 4960K, committed 5248K, reserved 1056768K
+  class space    used 490K, capacity 528K, committed 640K, reserved 1048576K
+
+Card table byte_map: [0x00007f2823dcd000,0x00007f2823fbd000] byte_map_base: 0x00007f28237bc000
+
+Polling page: 0x00007f283a4ab000
+
+CodeCache: size=245760Kb used=1329Kb max_used=1330Kb free=244430Kb
+ bounds [0x00007f282437d000, 0x00007f28245ed000, 0x00007f283337d000]
+ total_blobs=381 nmethods=126 adapters=169
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 1.548 Thread 0x00007f28340b2000  122       3       java.util.concurrent.ConcurrentHashMap::addCount (292 bytes)
+Event: 1.550 Thread 0x00007f28340b2000 nmethod 122 0x00007f28244c5a10 code [0x00007f28244c5c20, 0x00007f28244c66d8]
+Event: 1.553 Thread 0x00007f28340b2000  123       1       java.util.logging.Logger::getName (5 bytes)
+Event: 1.553 Thread 0x00007f28340b2000 nmethod 123 0x00007f28244ca210 code [0x00007f28244ca360, 0x00007f28244ca470]
+Event: 1.553 Thread 0x00007f28340b2000  124       3       java.lang.String::substring (56 bytes)
+Event: 1.554 Thread 0x00007f28340b2000 nmethod 124 0x00007f28244c9b10 code [0x00007f28244c9cc0, 0x00007f28244ca060]
+Event: 3.887 Thread 0x00007f28340b2000  125       3       java.lang.ThreadLocal::get (38 bytes)
+Event: 3.887 Thread 0x00007f28340b2000 nmethod 125 0x00007f28244c9450 code [0x00007f28244c95e0, 0x00007f28244c9910]
+Event: 3.888 Thread 0x00007f28340b2000  126  s    1       java.util.Vector::size (5 bytes)
+Event: 3.888 Thread 0x00007f28340b2000 nmethod 126 0x00007f28244c9010 code [0x00007f28244c9160, 0x00007f28244c93d0]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (6 events):
+Event: 0.017 Thread 0x00007f2834009800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000c2207ca8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u151/9699/hotspot/src/sha
+Event: 0.017 Thread 0x00007f2834009800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000c2207f90) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u151/9699/hotspot/src/share/vm/prims/jni.cp
+Event: 0.060 Thread 0x00007f2834009800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000c228bd20) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u151/9699/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.060 Thread 0x00007f2834009800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000c228c118) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u151/9699/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.061 Thread 0x00007f2834009800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000c228e8f8) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u151/9699/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+Event: 0.061 Thread 0x00007f2834009800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000c228ecf0) thrown at [/HUDSON/workspace/8-2-build-linux-amd64/jdk8u151/9699/hotspot/src/share/vm/prims/jvm.cpp, line 1390]
+
+Events (10 events):
+Event: 1.774 loading class java/util/Timer$1 done
+Event: 1.775 Thread 0x00007f28040c8000 Thread added: 0x00007f28040c8000
+Event: 3.886 loading class org/eclipse/paho/client/mqttv3/MqttMessage
+Event: 3.887 loading class org/eclipse/paho/client/mqttv3/MqttMessage done
+Event: 3.887 loading class java/lang/IllegalStateException
+Event: 3.887 loading class java/lang/IllegalStateException done
+Event: 3.887 loading class tw/edu/au/csie/ucan/bee/BeeJNI
+Event: 3.887 loading class tw/edu/au/csie/ucan/bee/BeeJNI done
+Event: 3.887 loading class java/lang/ClassLoaderHelper
+Event: 3.887 loading class java/lang/ClassLoaderHelper done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:01 2105286                            /home/project_bee/jdk1.8.0_151/bin/java
+00600000-00601000 rw-p 00000000 08:01 2105286                            /home/project_bee/jdk1.8.0_151/bin/java
+00687000-006a8000 rw-p 00000000 00:00 0                                  [heap]
+c2200000-c36a0000 rw-p 00000000 00:00 0 
+c36a0000-d6c00000 ---p 00000000 00:00 0 
+d6c00000-d9560000 rw-p 00000000 00:00 0 
+d9560000-100000000 ---p 00000000 00:00 0 
+100000000-1000a0000 rw-p 00000000 00:00 0 
+1000a0000-140000000 ---p 00000000 00:00 0 
+7f2804000000-7f28040c9000 rw-p 00000000 00:00 0 
+7f28040c9000-7f2808000000 ---p 00000000 00:00 0 
+7f2808000000-7f2808049000 rw-p 00000000 00:00 0 
+7f2808049000-7f280c000000 ---p 00000000 00:00 0 
+7f280c000000-7f280c021000 rw-p 00000000 00:00 0 
+7f280c021000-7f2810000000 ---p 00000000 00:00 0 
+7f2810000000-7f28100eb000 rw-p 00000000 00:00 0 
+7f28100eb000-7f2814000000 ---p 00000000 00:00 0 
+7f2814000000-7f2814021000 rw-p 00000000 00:00 0 
+7f2814021000-7f2818000000 ---p 00000000 00:00 0 
+7f2818000000-7f2818021000 rw-p 00000000 00:00 0 
+7f2818021000-7f281c000000 ---p 00000000 00:00 0 
+7f281c000000-7f281c021000 rw-p 00000000 00:00 0 
+7f281c021000-7f2820000000 ---p 00000000 00:00 0 
+7f28214ba000-7f2821644000 r-xp 00000000 08:01 3158394                    /home/project_bee/adas-security-mq/bee-cpabe-sdk-0.1/jni/MQTT-JAVA/libbee-cpabe-0.1.so
+7f2821644000-7f2821844000 ---p 0018a000 08:01 3158394                    /home/project_bee/adas-security-mq/bee-cpabe-sdk-0.1/jni/MQTT-JAVA/libbee-cpabe-0.1.so
+7f2821844000-7f282184e000 r--p 0018a000 08:01 3158394                    /home/project_bee/adas-security-mq/bee-cpabe-sdk-0.1/jni/MQTT-JAVA/libbee-cpabe-0.1.so
+7f282184e000-7f2821852000 rw-p 00194000 08:01 3158394                    /home/project_bee/adas-security-mq/bee-cpabe-sdk-0.1/jni/MQTT-JAVA/libbee-cpabe-0.1.so
+7f2821852000-7f2821854000 rw-p 00000000 00:00 0 
+7f2821854000-7f2821857000 ---p 00000000 00:00 0 
+7f2821857000-7f2821955000 rw-p 00000000 00:00 0 
+7f2821955000-7f2821958000 ---p 00000000 00:00 0 
+7f2821958000-7f2821a56000 rw-p 00000000 00:00 0 
+7f2821a56000-7f2821a59000 ---p 00000000 00:00 0 
+7f2821a59000-7f2821b57000 rw-p 00000000 00:00 0 
+7f2821b57000-7f2821b6e000 r-xp 00000000 08:01 5247585                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f2821b6e000-7f2821d6e000 ---p 00017000 08:01 5247585                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f2821d6e000-7f2821d6f000 r--p 00017000 08:01 5247585                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f2821d6f000-7f2821d70000 rw-p 00018000 08:01 5247585                    /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f2821d70000-7f2821d72000 rw-p 00000000 00:00 0 
+7f2821d72000-7f2821d77000 r-xp 00000000 08:01 5247532                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7f2821d77000-7f2821f76000 ---p 00005000 08:01 5247532                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7f2821f76000-7f2821f77000 r--p 00004000 08:01 5247532                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7f2821f77000-7f2821f78000 rw-p 00005000 08:01 5247532                    /lib/x86_64-linux-gnu/libnss_dns-2.19.so
+7f2821f78000-7f2821f7a000 r-xp 00000000 08:01 5247540                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7f2821f7a000-7f2822179000 ---p 00002000 08:01 5247540                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7f2822179000-7f282217a000 r--p 00001000 08:01 5247540                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7f282217a000-7f282217b000 rw-p 00002000 08:01 5247540                    /lib/x86_64-linux-gnu/libnss_mdns4_minimal.so.2
+7f282217b000-7f2822192000 r-xp 00000000 08:01 3017470                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libnet.so
+7f2822192000-7f2822391000 ---p 00017000 08:01 3017470                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libnet.so
+7f2822391000-7f2822392000 rw-p 00016000 08:01 3017470                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libnet.so
+7f2822392000-7f2822395000 ---p 00000000 00:00 0 
+7f2822395000-7f2822493000 rw-p 00000000 00:00 0 
+7f2822493000-7f2822494000 ---p 00000000 00:00 0 
+7f2822494000-7f2822594000 rw-p 00000000 00:00 0 
+7f2822594000-7f2822597000 ---p 00000000 00:00 0 
+7f2822597000-7f2822695000 rw-p 00000000 00:00 0 
+7f2822695000-7f2822698000 ---p 00000000 00:00 0 
+7f2822698000-7f2822796000 rw-p 00000000 00:00 0 
+7f2822796000-7f2822799000 ---p 00000000 00:00 0 
+7f2822799000-7f2822897000 rw-p 00000000 00:00 0 
+7f2822897000-7f282289a000 ---p 00000000 00:00 0 
+7f282289a000-7f2822998000 rw-p 00000000 00:00 0 
+7f2822998000-7f282307b000 r--p 00000000 08:01 793601                     /usr/lib/locale/locale-archive
+7f282307b000-7f282307e000 ---p 00000000 00:00 0 
+7f282307e000-7f282317c000 rw-p 00000000 00:00 0 
+7f282317c000-7f282317f000 ---p 00000000 00:00 0 
+7f282317f000-7f282327d000 rw-p 00000000 00:00 0 
+7f282327d000-7f282327e000 ---p 00000000 00:00 0 
+7f282327e000-7f282337e000 rw-p 00000000 00:00 0 
+7f282337e000-7f2823557000 r--s 03d5a000 08:01 3017412                    /home/project_bee/jdk1.8.0_151/jre/lib/rt.jar
+7f2823557000-7f2823a4d000 rw-p 00000000 00:00 0 
+7f2823a4d000-7f2823dcd000 ---p 00000000 00:00 0 
+7f2823dcd000-7f2823dd8000 rw-p 00000000 00:00 0 
+7f2823dd8000-7f2823e72000 ---p 00000000 00:00 0 
+7f2823e72000-7f2823e87000 rw-p 00000000 00:00 0 
+7f2823e87000-7f2823fbc000 ---p 00000000 00:00 0 
+7f2823fbc000-7f2823fc7000 rw-p 00000000 00:00 0 
+7f2823fc7000-7f282437d000 ---p 00000000 00:00 0 
+7f282437d000-7f28245ed000 rwxp 00000000 00:00 0 
+7f28245ed000-7f283337d000 ---p 00000000 00:00 0 
+7f283337d000-7f2833398000 r-xp 00000000 08:01 3017466                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libzip.so
+7f2833398000-7f2833598000 ---p 0001b000 08:01 3017466                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libzip.so
+7f2833598000-7f2833599000 rw-p 0001b000 08:01 3017466                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libzip.so
+7f2833599000-7f28335a3000 r-xp 00000000 08:01 5247534                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f28335a3000-7f28337a2000 ---p 0000a000 08:01 5247534                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f28337a2000-7f28337a3000 r--p 00009000 08:01 5247534                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f28337a3000-7f28337a4000 rw-p 0000a000 08:01 5247534                    /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f28337a4000-7f28337af000 r-xp 00000000 08:01 5247544                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f28337af000-7f28339ae000 ---p 0000b000 08:01 5247544                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f28339ae000-7f28339af000 r--p 0000a000 08:01 5247544                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f28339af000-7f28339b0000 rw-p 0000b000 08:01 5247544                    /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f28339b0000-7f28339c7000 r-xp 00000000 08:01 5247528                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f28339c7000-7f2833bc6000 ---p 00017000 08:01 5247528                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f2833bc6000-7f2833bc7000 r--p 00016000 08:01 5247528                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f2833bc7000-7f2833bc8000 rw-p 00017000 08:01 5247528                    /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f2833bc8000-7f2833bca000 rw-p 00000000 00:00 0 
+7f2833bca000-7f2833bd3000 r-xp 00000000 08:01 5247530                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f2833bd3000-7f2833dd2000 ---p 00009000 08:01 5247530                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f2833dd2000-7f2833dd3000 r--p 00008000 08:01 5247530                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f2833dd3000-7f2833dd4000 rw-p 00009000 08:01 5247530                    /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f2833dd4000-7f2833dff000 r-xp 00000000 08:01 3017460                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libjava.so
+7f2833dff000-7f2833ffe000 ---p 0002b000 08:01 3017460                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libjava.so
+7f2833ffe000-7f2834000000 rw-p 0002a000 08:01 3017460                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libjava.so
+7f2834000000-7f28343aa000 rw-p 00000000 00:00 0 
+7f28343aa000-7f2838000000 ---p 00000000 00:00 0 
+7f2838030000-7f2838045000 rw-p 00000000 00:00 0 
+7f2838045000-7f283817b000 ---p 00000000 00:00 0 
+7f283817b000-7f2838188000 r-xp 00000000 08:01 3017465                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libverify.so
+7f2838188000-7f2838388000 ---p 0000d000 08:01 3017465                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libverify.so
+7f2838388000-7f283838a000 rw-p 0000d000 08:01 3017465                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/libverify.so
+7f283838a000-7f2838391000 r-xp 00000000 08:01 5247587                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f2838391000-7f2838590000 ---p 00007000 08:01 5247587                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f2838590000-7f2838591000 r--p 00006000 08:01 5247587                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f2838591000-7f2838592000 rw-p 00007000 08:01 5247587                    /lib/x86_64-linux-gnu/librt-2.19.so
+7f2838592000-7f2838697000 r-xp 00000000 08:01 5247509                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f2838697000-7f2838896000 ---p 00105000 08:01 5247509                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f2838896000-7f2838897000 r--p 00104000 08:01 5247509                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f2838897000-7f2838898000 rw-p 00105000 08:01 5247509                    /lib/x86_64-linux-gnu/libm-2.19.so
+7f2838898000-7f283956b000 r-xp 00000000 08:01 3157090                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/server/libjvm.so
+7f283956b000-7f283976a000 ---p 00cd3000 08:01 3157090                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/server/libjvm.so
+7f283976a000-7f2839844000 rw-p 00cd2000 08:01 3157090                    /home/project_bee/jdk1.8.0_151/jre/lib/amd64/server/libjvm.so
+7f2839844000-7f283988f000 rw-p 00000000 00:00 0 
+7f283988f000-7f2839a49000 r-xp 00000000 08:01 5247459                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f2839a49000-7f2839c49000 ---p 001ba000 08:01 5247459                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f2839c49000-7f2839c4d000 r--p 001ba000 08:01 5247459                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f2839c4d000-7f2839c4f000 rw-p 001be000 08:01 5247459                    /lib/x86_64-linux-gnu/libc-2.19.so
+7f2839c4f000-7f2839c54000 rw-p 00000000 00:00 0 
+7f2839c54000-7f2839c57000 r-xp 00000000 08:01 5247476                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f2839c57000-7f2839e56000 ---p 00003000 08:01 5247476                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f2839e56000-7f2839e57000 r--p 00002000 08:01 5247476                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f2839e57000-7f2839e58000 rw-p 00003000 08:01 5247476                    /lib/x86_64-linux-gnu/libdl-2.19.so
+7f2839e58000-7f2839e6e000 r-xp 00000000 08:01 2242002                    /home/project_bee/jdk1.8.0_151/lib/amd64/jli/libjli.so
+7f2839e6e000-7f283a06d000 ---p 00016000 08:01 2242002                    /home/project_bee/jdk1.8.0_151/lib/amd64/jli/libjli.so
+7f283a06d000-7f283a06e000 rw-p 00015000 08:01 2242002                    /home/project_bee/jdk1.8.0_151/lib/amd64/jli/libjli.so
+7f283a06e000-7f283a087000 r-xp 00000000 08:01 5247579                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f283a087000-7f283a286000 ---p 00019000 08:01 5247579                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f283a286000-7f283a287000 r--p 00018000 08:01 5247579                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f283a287000-7f283a288000 rw-p 00019000 08:01 5247579                    /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f283a288000-7f283a28c000 rw-p 00000000 00:00 0 
+7f283a28c000-7f283a2af000 r-xp 00000000 08:01 5247435                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f283a2c0000-7f283a392000 rw-p 00000000 00:00 0 
+7f283a392000-7f283a395000 ---p 00000000 00:00 0 
+7f283a395000-7f283a497000 rw-p 00000000 00:00 0 
+7f283a49f000-7f283a4a2000 rw-p 00000000 00:00 0 
+7f283a4a2000-7f283a4aa000 rw-s 00000000 08:01 1718012                    /tmp/hsperfdata_project_bee/16465
+7f283a4aa000-7f283a4ab000 rw-p 00000000 00:00 0 
+7f283a4ab000-7f283a4ac000 r--p 00000000 00:00 0 
+7f283a4ac000-7f283a4ae000 rw-p 00000000 00:00 0 
+7f283a4ae000-7f283a4af000 r--p 00022000 08:01 5247435                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f283a4af000-7f283a4b0000 rw-p 00023000 08:01 5247435                    /lib/x86_64-linux-gnu/ld-2.19.so
+7f283a4b0000-7f283a4b1000 rw-p 00000000 00:00 0 
+7ffd406df000-7ffd40700000 rw-p 00000000 00:00 0                          [stack]
+7ffd40787000-7ffd40789000 r--p 00000000 00:00 0                          [vvar]
+7ffd40789000-7ffd4078b000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Djava.library.path=.. 
+java_command: MQTT_Publisher
+java_class_path (initial): .
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/project_bee/jdk1.8.0_151
+JRE_HOME=/home/project_bee/jdk1.8.0_151/jre
+PATH=/home/project_bee/jdk1.8.0_151/bin:/home/project_bee/jdk1.8.0_151/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xacbe10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xacbe10], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x924f90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x924f90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x924f90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x924f90], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x9267d0], sa_mask[0]=00000000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x927bd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x927bd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x927bd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x927bd0], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=14.04
+DISTRIB_CODENAME=trusty
+DISTRIB_DESCRIPTION="Ubuntu 14.04.5 LTS"
+
+uname:Linux 4.4.0-31-generic #50~14.04.1-Ubuntu SMP Wed Jul 13 01:07:32 UTC 2016 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 15721, NOFILE 4096, AS infinity
+load average:0.45 0.27 0.24
+
+/proc/meminfo:
+MemTotal:        4046976 kB
+MemFree:          387232 kB
+MemAvailable:    2054652 kB
+Buffers:          173388 kB
+Cached:          1649608 kB
+SwapCached:            0 kB
+Active:          2508376 kB
+Inactive:         924088 kB
+Active(anon):    1513200 kB
+Inactive(anon):   107088 kB
+Active(file):     995176 kB
+Inactive(file):   817000 kB
+Unevictable:          32 kB
+Mlocked:              32 kB
+SwapTotal:       4191228 kB
+SwapFree:        4191228 kB
+Dirty:               212 kB
+Writeback:             0 kB
+AnonPages:       1609564 kB
+Mapped:           190160 kB
+Shmem:             10800 kB
+Slab:             141812 kB
+SReclaimable:     116736 kB
+SUnreclaim:        25076 kB
+KernelStack:       15408 kB
+PageTables:        35340 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     6214716 kB
+Committed_AS:    6797352 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:   1040384 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      104384 kB
+DirectMap2M:     4089856 kB
+
+
+CPU:total 1 (initial active 1) (1 cores per cpu, 1 threads per core) family 6 model 94 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, 3dnowpref, lzcnt, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 94
+model name	: Intel(R) Core(TM) i7-6700 CPU @ 3.40GHz
+stepping	: 3
+cpu MHz		: 3407.998
+cache size	: 8192 KB
+physical id	: 0
+siblings	: 1
+core id		: 0
+cpu cores	: 1
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 syscall nx rdtscp lm constant_tsc rep_good nopl xtopology nonstop_tsc pni pclmulqdq monitor ssse3 cx16 sse4_1 sse4_2 x2apic movbe popcnt aes xsave avx rdrand hypervisor lahf_lm abm 3dnowprefetch rdseed clflushopt
+bugs		:
+bogomips	: 6815.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 4046976k(387232k free), swap 4191228k(4191228k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.151-b12) for linux-amd64 JRE (1.8.0_151-b12), built on Sep  5 2017 19:20:58 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Thu Nov  2 15:26:39 2017
+elapsed time: 3 seconds (0d 0h 0m 3s)
+

@@ -7,6 +7,7 @@ import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
 import org.eclipse.paho.client.mqttv3.MqttException;
 import org.eclipse.paho.client.mqttv3.MqttMessage;
 import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
+import tw.edu.au.csie.ucan.bee.BeeJNI;
 //this is MQTT_Subscribe
 public class MQTT_Subscribe{
     public static void main(String[] args) {
@@ -14,16 +15,20 @@ public class MQTT_Subscribe{
         //String topic        = "MQTT Examples";
         String content      = "Message from MqttPublishSample";
         int qos             = 2;
-        String broker       = "ssl://iot.eclipse.org:8883";
+        String broker       = "tcp://iot.eclipse.org:1883";
         String clientId     = "JavaSample";
         String userName ="test";
         String password = "000";
         MemoryPersistence persistence = new MemoryPersistence();
-
-        
+	String  publishkey_path = "/home/project_bee/Desktop/cpabe_publickey";
+	String  Secretkey_path = "/home/project_bee/Desktop/cpabe_secretkey";
         try {
             MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
             MqttConnectOptions connOpts = new MqttConnectOptions();
+	    
+	    connOpts.setPublickey(publishkey_path);
+	    connOpts.setSecretkey(Secretkey_path);
+
             sampleClient.setCallback(new MqttCallback() {
 				 
 	            @Override
@@ -31,8 +36,9 @@ public class MQTT_Subscribe{
 	            }
 	 
 	            @Override
-	            public void messageArrived(String topic, MqttMessage message) throws Exception {
-	                System.out.println(topic + ": " + message.toString());
+	            public void messageArrived(String topic, MqttMessage message) throws Exception {	
+			String mess = message.toString();
+	                System.out.println(topic + ": " + message);
 	            }
 	 
 	            @Override

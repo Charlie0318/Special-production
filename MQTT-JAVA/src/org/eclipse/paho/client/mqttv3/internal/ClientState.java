@@ -1027,11 +1027,13 @@ public class ClientState {
 		if (!quiescing) {
 			if (message instanceof MqttPublish) {
 				MqttPublish send = (MqttPublish) message;
+				
 				switch (send.getMessage().getQos()) {
 				case 0:
 				case 1:
 					if (callback != null) {
 						callback.messageArrived(send);
+// there sub will passed
 					}
 					break;
 				case 2:

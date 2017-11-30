@@ -30,7 +30,6 @@ public class MqttMessage {
 	private boolean retained = false;
 	private boolean dup = false;
 	private int messageId;
-	
 	/**
 	 * Utility method to validate the supplied QoS value.
 	 * @throws IllegalArgumentException if value of QoS is not 0, 1 or 2.
@@ -246,9 +245,9 @@ public class MqttMessage {
 	}
 
 	
+	
+	
+	
+	}
 
-	
-	
-	
-	
-}
+

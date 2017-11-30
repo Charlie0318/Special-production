@@ -156,7 +156,7 @@ public class MqttPublish extends MqttPersistableWireMessage {
 			((MqttReceivedMessage)message).setMessageId(msgId);
 		}
 	}
-	
+
 	protected byte[] getVariableHeader() throws MqttException {
 		try {
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();

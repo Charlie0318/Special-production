@@ -77,7 +77,11 @@ public class MqttConnectOptions {
 	private String[] serverURIs = null;
 	private int MqttVersion = MQTT_VERSION_DEFAULT;
 	private boolean automaticReconnect = false;
-
+//bee
+	private String policy;
+	private String publickey_path;
+	private String Secretkey_path;
+//	
 	/**
 	 * Constructs a new <code>MqttConnectOptions</code> object using the
 	 * default values.
@@ -604,8 +608,32 @@ public class MqttConnectOptions {
 	public String toString() {
 		return Debug.dumpProperties(getDebug(), "Connection options");
 	}
-
+//bee
+	public void setPolicy(String policy) {
+		this.policy = policy;
+	}
+	public void setPublickey(String publickey_path) {
+		
+		this.publickey_path = publickey_path;
+	}
+	public void setSecretkey(String Secretkey_path) {
+		
+		this.Secretkey_path = Secretkey_path;
+	}
+	
 	
 
+	public String getPolicy() {
+		return this.policy;
+	}
+	public String getPublickey() {
+		
+		return this.publickey_path;
+	}
+	public String getSecretkey() {
+		
+		return this.Secretkey_path;
+	}
+//
 	
 }

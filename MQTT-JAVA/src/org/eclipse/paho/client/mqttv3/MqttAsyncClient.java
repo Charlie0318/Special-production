@@ -105,9 +105,11 @@ public class MqttAsyncClient implements IMqttAsyncClient { // DestinationProvide
 	private static int reconnectDelay = 1000;  // Reconnect delay, starts at 1 second
 	private boolean reconnecting = false;
 	
-
-
-
+//bee
+	public MqttConnectOptions getConnectOptions() {
+		return this.connOpts;
+	}
+//bee
 
 	/**
 	 * Create an MqttAsyncClient that is used to communicate with an MQTT server.
