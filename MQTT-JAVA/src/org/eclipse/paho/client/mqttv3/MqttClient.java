@@ -27,7 +27,7 @@ import org.eclipse.paho.client.mqttv3.util.Debug;
 
 
 //bee
-import tw.edu.au.csie.ucan.bee.BeeJNI;
+import tw.edu.au.csie.ucan.bee.Beebit;
 
 /**
  * Lightweight client for talking to an MQTT server using methods that block
@@ -441,41 +441,8 @@ public class MqttClient implements IMqttClient { //), DestinationProvider {
 //bee
 	public void publish(String topic, MqttMessage message,int security,boolean bee) throws MqttException,MqttPersistenceException {
 		if(bee == true){
-		String me = message.toString();//turn String
-		BeeJNI JNI = new BeeJNI();
-		byte[] enc_msg = null;
-		byte security_byte = (byte)security;
-		int enc_length = 0;
-		int rc = 0;
-		byte[] bee_len_bef =new byte [4];
-		switch (security){
-
-			case 6:
-				enc_msg = JNI.enc(aClient.getConnectOptions().getPublickey(),me,aClient.getConnectOptions().getPolicy());
-				if(enc_msg == null){
-					System.out.println("ENC ERROR");
-				}
-				break;
-			default:
-				break;
-		}
-		enc_length=enc_msg.length;
-		int bee_i = 0;
-		do
-		{
-			byte d = (byte)(enc_length % 128);
-			enc_length /= 128;
-			if(enc_length > 0)
-			{
-		       		d |= 0x80;
-			}
-			bee_len_bef[bee_i++] = d;
-		}while(enc_length > 0);
-		byte[] send = new byte [1 +bee_i+ enc_msg.length];
-		send[0] = security_byte;
-		System.arraycopy(bee_len_bef,0,send,1,bee_i);
-		System.arraycopy(enc_msg,0,send,1+bee_i,enc_msg.length);
-		message.setPayload(send);
+		Beebit bee_enc = new Beebit();
+		bee_enc.Encode(aClient ,message ,security);
 
 		aClient.publish(topic, message, security,null).waitForCompletion(getTimeToWait());
 		}

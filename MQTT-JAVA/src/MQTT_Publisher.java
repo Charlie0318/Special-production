@@ -43,8 +43,8 @@ public class MQTT_Publisher {
         int security = 6;
         boolean test = false;
         boolean bee = true;
-        String policy = "jackie and s > 100";
-	String publickey_path = "/home/project_bee/Desktop/cpabe_publickey";
+        String policy = "jackie and s > 100";	//policy content
+	String publickey_path = "/home/project_bee/Desktop/cpabe_publickey";	//publickey path
         
         
         try {

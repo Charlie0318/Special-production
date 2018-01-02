@@ -38,7 +38,7 @@ import org.eclipse.paho.client.mqttv3.logging.Logger;
 import org.eclipse.paho.client.mqttv3.logging.LoggerFactory;
 
 //bee
-import tw.edu.au.csie.ucan.bee.BeeJNI;
+import tw.edu.au.csie.ucan.bee.Beebit;
 
 /**
  * Bridge between Receiver and the external API. This class gets called by
@@ -336,8 +336,10 @@ public class CommsCallback implements Runnable {
 			}
 			if (!quiescing) {
 //bee				
-				BeeDec(sendMessage.getMessage().getPayload(),sendMessage);
+				Beebit bee = new Beebit();
+				bee.Decode(this.clientComms.getConOptions(),sendMessage.getMessage().getPayload(),sendMessage);		
 // bee
+				messageQueue.addElement(sendMessage);
 				// Notify the CommsCallback thread that there's work to do...
 				synchronized (workAvailable) {
 					// @TRACE 710=new msg avail, notify workAvailable
@@ -483,29 +485,5 @@ public class CommsCallback implements Runnable {
 		
 		return delivered;
 	}
-//bee
-	public void BeeDec(byte[] bee_len_bef,MqttPublish sendMessage)
-	{
-		int value =0;
-		int multiplier = 1;
-		int number = 1;
-		BeeJNI JNI =new BeeJNI();
-		do
-		{
-			value += (bee_len_bef[number]&127)*multiplier;
-			multiplier *= 128;
-		}while((bee_len_bef[number++]&128)!=0);
-		byte[] bee_msg =new byte [value];
-		System.arraycopy(bee_len_bef,number,bee_msg,0,value);
-		byte[] bee = JNI.dec(this.clientComms.getConOptions().getPublickey(),this.clientComms.getConOptions().getSecretkey(),bee_msg);
-		if(bee == null){
-			sendMessage.getMessage().setPayload("Dec fail".getBytes());
-		}else{
-			sendMessage.getMessage().setPayload(bee);
-		}	
-		messageQueue.addElement(sendMessage);
-			
-	}
-//bee
 
 }

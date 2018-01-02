@@ -20,8 +20,8 @@ public class MQTT_Subscribe{
         String userName ="test";
         String password = "000";
         MemoryPersistence persistence = new MemoryPersistence();
-	String  publishkey_path = "/home/project_bee/Desktop/cpabe_publickey";
-	String  Secretkey_path = "/home/project_bee/Desktop/cpabe_secretkey";
+	String  publishkey_path = "/home/project_bee/Desktop/cpabe_publickey";	//publishkkey path
+	String  Secretkey_path = "/home/project_bee/Desktop/cpabe_secretkey";	//Secretkey path
         try {
             MqttClient sampleClient = new MqttClient(broker, clientId, persistence);
             MqttConnectOptions connOpts = new MqttConnectOptions();
